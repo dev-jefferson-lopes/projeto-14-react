@@ -6,15 +6,24 @@ import './index.css'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from './pages/Home';
 import Filme from './pages/Filme';
+import Header from './components/Header';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <App />,
+  },
+  {
+    path: "/home",
     element: <Home />,
   },
   {
     path: "/filme/:id",
     element: <Filme />,
+  },
+  {
+    path: "/header",
+    element: <Header />,
   },
 ]);
 
